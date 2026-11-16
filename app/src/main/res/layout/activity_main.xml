@@ -1,0 +1,44 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical" android:background="#080D17" android:padding="20dp">
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:text="MY MUSIC" android:textColor="#20C7A5" android:textStyle="bold"
+        android:textSize="12sp" android:letterSpacing="0.18" />
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:text="Bibliothèque" android:textColor="#F4F7FB" android:textSize="30sp"
+        android:textStyle="bold" android:layout_marginTop="8dp" />
+    <TextView android:id="@+id/statusText" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:text="Autorise l'accès à tes fichiers audio."
+        android:textColor="#9AA8B8" android:textSize="14sp" android:layout_marginTop="8dp" />
+    <Button android:id="@+id/permissionButton" android:layout_width="match_parent"
+        android:layout_height="52dp" android:text="AUTORISER L'ACCÈS AUDIO"
+        android:textColor="#06130F" android:backgroundTint="#20C7A5"
+        android:layout_marginTop="18dp" />
+    <androidx.recyclerview.widget.RecyclerView android:id="@+id/songList"
+        android:layout_width="match_parent" android:layout_height="0dp"
+        android:layout_weight="1" android:clipToPadding="false"
+        android:paddingTop="12dp" android:paddingBottom="12dp" />
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:background="#141D2B" android:padding="16dp">
+        <TextView android:id="@+id/nowPlaying" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:text="Aucune chanson sélectionnée"
+            android:textColor="#F4F7FB" android:textStyle="bold" android:textSize="15sp"
+            android:maxLines="1" android:ellipsize="end" />
+        <TextView android:id="@+id/artistText" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:text="Choisis un morceau dans ta bibliothèque"
+            android:textColor="#9AA8B8" android:textSize="12sp" android:layout_marginTop="4dp"
+            android:maxLines="1" android:ellipsize="end" />
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:gravity="center" android:orientation="horizontal" android:layout_marginTop="8dp">
+            <Button android:id="@+id/prevButton" android:layout_width="wrap_content"
+                android:layout_height="48dp" android:text="|◀" android:textColor="#F4F7FB"
+                android:backgroundTint="#263448" />
+            <Button android:id="@+id/playButton" android:layout_width="wrap_content"
+                android:layout_height="48dp" android:text="▶ Lecture" android:textColor="#06130F"
+                android:backgroundTint="#20C7A5" android:layout_marginHorizontal="12dp" />
+            <Button android:id="@+id/nextButton" android:layout_width="wrap_content"
+                android:layout_height="48dp" android:text="▶|" android:textColor="#F4F7FB"
+                android:backgroundTint="#263448" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
